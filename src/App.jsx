@@ -24,10 +24,11 @@ function App() {
   );
 
   return (
-    <div className="App">
-      <input type="text" placeholder="Search by first name" onChange={handleChange} />
+    <div className="App" style= {{ display : "flex", justifyContent:"center", textAlign:"center", alignItems:"center", width:"100vw"} }>
+      <input type="text" placeholder="Search by first name" onChange={handleChange}  />
       {filteredUsers.map(user => (
         <div key={user.id}>
+          <div>{user.id}</div>
           <img src={user.avatar} alt={user.first_name} />
           <p>{user.first_name}</p>
         </div>
